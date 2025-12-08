@@ -2,7 +2,8 @@
 
 int main(){
 
-    int populacao1, turismo1;
+    int turismo1;
+    unsigned long int populacao1;
     char nome1[30], codigo1[4], letra1;
     float area1, pib1, densidade1, ppc1, superpoder1;
 
@@ -30,15 +31,16 @@ int main(){
 
     densidade1 = populacao1 / area1;
     ppc1 = pib1 / populacao1;
-    superpoder1 = area1 + pib1 + populacao1 + turismo1 - densidade1 + ppc1;
+    superpoder1 = area1 + pib1 + populacao1 + turismo1 + ppc1 + (1/densidade1);
 
     while (getchar() != '\n');
 
     printf("\nCADASTRO DA CARTA 2\n");
 
-    int populacao2, turismo2;
+    int turismo2;
+    unsigned long int populacao2;
     char nome2 [30], codigo2[4], letra2;
-    float area2, pib2, densidade2, ppc2;
+    float area2, pib2, densidade2, ppc2, superpoder2;
 
     printf("Digite o nome da cidade:");
     scanf("%s", nome2);
@@ -63,7 +65,7 @@ int main(){
 
     densidade2 = populacao2 / area2;
     ppc2 = pib2 / populacao2;
-    superpoder2 = area2 + pib2 + populacao2 + turismo2 - densidade2 + ppc2;
+    superpoder2 = area2 + pib2 + populacao2 + turismo2 + ppc2 + (1/densidade2);
 
     while (getchar() != '\n');
 
@@ -77,28 +79,28 @@ int main(){
     printf("Número de Pontos Turísticos: %d\n", turismo1);
     printf("Densidade Populacional: %f hab/km²\n", densidade1);
     printf("PIB per Capita: %f reais\n", ppc1);
-    printf("Super Poder: %.2f\n, superpoder1);
+    printf("Super Poder: %.2f\n", superpoder1);
 
 
     printf("\nCadastro da carta 2\n");
     printf("Estado: %c\n", letra2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nome2);
-    printf("População: %d\n", populacao2);
+    printf("População: %u\n", populacao2);
     printf("Área: %f km²\n", area2);
     printf("PIB: %f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", turismo2);
     printf("Densidade Populacional: %f hab/km²\n", densidade2);
     printf("PIB per Capita: %f reais\n", ppc2);
-    printf("Super Poder: %.2f\n, superpoder2);
+    printf("Super Poder: %.2f\n", superpoder2);
 
-  printf ("População: %c venceu (%d)", nome1, (populacao1>populacao2));
-  printf ("Área: %c venceu (%d)", nome1, (area1>area2));
-  printf ("PIB: %c venceu (%d)"), nome1, (pib1>pib2);
-  printf ("Pontos Turísticos: %c venceu (%d)", nome1, (turismo1>turismo2));
-  printf ("Densidade Populacional: %c venceu (%d)", nome1, (densidade1<densidade2);
-  printf ("PIB per Capita: %c venceu (%d)", nome1, (pib1>pib2));
-  printf ("Super Poder: %c venceu (%d)", nome1, (superpoder1>superpoder2));
+    printf ("População: Carta 1 venceu (%d)\n", (populacao1>populacao2));
+    printf ("Área: Carta 1 venceu (%d)\n", (area1>area2));
+    printf ("PIB: Carta 1 venceu (%d)\n", (pib1>pib2));
+    printf ("Pontos Turísticos: Carta 1 venceu (%d)\n", (turismo1>turismo2));
+    printf ("Densidade Populacional: Carta 1 venceu (%d)\n", (densidade1<densidade2));
+    printf ("PIB per Capita: Carta 1 venceu (%d)\n", (ppc1>ppc2));
+    printf ("Super Poder: Carta 1 venceu (%d)\n", (superpoder1>superpoder2));
 
 
     getchar();

@@ -24,7 +24,7 @@ int main(){
     scanf("%f", &pib1);
 
     printf("Digite a população da cidade:");
-    scanf("%d", &populacao1);
+    scanf("%u", &populacao1);
 
     printf("Quantos pontos turísticos tem na cidade?");
     scanf("%d", &turismo1);
@@ -58,7 +58,7 @@ int main(){
     scanf("%f", &pib2);
 
     printf("Digite a população da cidade:");
-    scanf("%d", &populacao2);
+    scanf("%u", &populacao2);
 
     printf("Quantos pontos turísticos tem na cidade?");
     scanf("%d", &turismo2);
@@ -73,7 +73,7 @@ int main(){
     printf("Estado: %c\n", letra1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nome1);
-    printf("População: %d\n", populacao1);
+    printf("População: %u\n", populacao1);
     printf("Área: %f km²\n", area1);
     printf("PIB: %f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", turismo1);

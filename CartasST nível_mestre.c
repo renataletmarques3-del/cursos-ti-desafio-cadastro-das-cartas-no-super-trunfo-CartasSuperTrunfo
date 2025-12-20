@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 int main(){
-
+//variaveis carta1
     int turismo1, opcao1, opcao2;
     int resultado1, resultado2;
     unsigned long int populacao1;
     char nome1[30], codigo1[4], letra1, atributo1, atributo2;
     float area1, pib1, densidade1, ppc1, superpoder1;
-
+    
+//coleta de dados carta1
     printf("CADASTRO DA CARTA 1\n");
     printf("Digite o nome da cidade:");
     scanf("%s", nome1);
@@ -30,18 +31,18 @@ int main(){
     printf("Quantos pontos turísticos tem na cidade?");
     scanf("%d", &turismo1);
 
+//calculo de densidade, pib per capita e superpoder da carta1
     densidade1 = populacao1 / area1;
     ppc1 = pib1 / populacao1;
     superpoder1 = area1 + pib1 + populacao1 + turismo1 + ppc1 + (1/densidade1);
 
-
-    printf("\nCADASTRO DA CARTA 2\n");
-
+//variaveis carta2
     int turismo2;
     unsigned long int populacao2;
     char nome2 [30], codigo2[4], letra2;
     float area2, pib2, densidade2, ppc2, superpoder2;
-
+//coleta de dados carta2
+    printf("\nCADASTRO DA CARTA 2\n");
     printf("Digite o nome da cidade:");
     scanf("%s", nome2);
 
@@ -63,10 +64,12 @@ int main(){
     printf("Quantos pontos turísticos tem na cidade?");
     scanf("%d", &turismo2);
 
+//calculo de densidade, pib per capita e superpoder da carta1
     densidade2 = populacao2 / area2;
     ppc2 = pib2 / populacao2;
     superpoder2 = area2 + pib2 + populacao2 + turismo2 + ppc2 + (1/densidade2);
 
+//cadastro carta 1
     printf("\nCadastro da carta 1\n");
     printf("1. Estado: %c\n", letra1);
     printf("2. Código: %s\n", codigo1);
@@ -79,7 +82,7 @@ int main(){
     printf("9. PIB per Capita: %f reais\n", ppc1);
     printf("10. Super Poder: %.2f\n", superpoder1);
 
-
+//cadastro carta 2
     printf("\nCadastro da carta 2\n");
     printf("1. Estado: %c\n", letra2);
     printf("2. Código: %s\n", codigo2);
@@ -92,6 +95,7 @@ int main(){
     printf("9. PIB per Capita: %f reais\n", ppc2);
     printf("10. Super Poder: %.2f\n", superpoder2);
 
+//opcao1 de atributo entrada
     printf("\n### Qual atributo você quer comparar entre as duas cartas? ###\n");
     printf("Você tem as seguintes opções: \n");
     printf("1. População\n");
@@ -104,6 +108,7 @@ int main(){
     printf("### Digite sua opção: ###");
     scanf("%d", &opcao1);
 
+//Qual foi o atributo escolhido?
     switch (opcao1)
     {
     case 1:
@@ -135,6 +140,8 @@ int main(){
             printf ("\nVocê escolheu o atributo Super poder\n");        
         break;
         }
+    
+//opcao2 de atributo
     printf("\n### Qual atributo você quer comparar entre as duas cartas? ###\n");
     printf("(Você não pode escolher o mesmo atributo da jogada anterior)");
     printf("1. População\n");
@@ -147,6 +154,7 @@ int main(){
     printf("### Digite sua opção: ###");
     scanf("%d", &opcao2);
 
+//Qual foi o atributo escolhido??    
     if (opcao2==opcao1){
         printf("\nVocê escolheu o mesmo atributo!\n"); 
     }else{;
@@ -183,16 +191,19 @@ int main(){
         
         }}
 
-        if (resultado1==resultado2){
-            if (resultado1==1){
+//Anúncio de resultado
+        if (resultado1 == resultado2) {
+            if (resultado1 == 1) {
                 printf("A carta 1 ganhou essa rodada!\n");
-            }else if(resultado1==0){
-                printf("A carta 2 ganhou essa rodada!\n");    
-            }    
-            else{
-                printf("Deu empate!\n");
+            } else { // resultado1 == 0
+                printf("A carta 2 ganhou essa rodada!\n");
             }
-            }
+        } else { // resultado1 != resultado2
+            printf("Deu empate!\n");
+        }
+//saída
+    getchar();
+    printf("Pressione ENTER para sair...");
     getchar();
     printf("Pressione ENTER para sair...");
 
